@@ -1,0 +1,39 @@
+#
+# Copyright (c) 2021-2023 NVIDIA CORPORATION & AFFILIATES, ALL RIGHTS RESERVED.
+#
+# This software product is a proprietary product of NVIDIA CORPORATION &
+# AFFILIATES (the "Company") and all right, title, and interest in and to the
+# software product, including all associated intellectual property rights, are
+# and shall remain exclusively with the Company.
+#
+# This software product is governed by the End User License Agreement
+# provided with the software product.
+#
+
+option('enable_all_applications', type: 'boolean', value: false,
+	description: 'Enable all DOCA applications.')
+
+option('enable_grpc_support', type: 'boolean', value: false,
+	description: 'Enable all gRPC based DOCA applications.')
+
+option('enable_gpu_support', type: 'boolean', value: false,
+	description: 'Enable all GPU based DOCA applications.')
+
+option('enable_cross_compilation_to_dpu', type: 'boolean', value: false,
+	description: 'Enable cross-compilation mode from host to DPU.')
+
+option('enable_driver_flexio', type: 'boolean', value: true,
+	description: 'Activate the FlexIO driver support when accessible.')
+
+option('enable_driver_ucx', type: 'boolean', value: true,
+	description: 'Activate the UCX driver support when accessible.')
+
+option('enable_deprecated_features', type: 'boolean', value: true,
+	description: 'Silence compilation warnings regarding depreated DOCA features.')
+
+option('enable_trace_log', type: 'boolean', value: false,
+	description: 'Enable trace log.')
+
+# Enables per application - turned off by default
+option('enable_l2_reflector', type: 'boolean', value: true,
+	description: 'Enable L2 Reflector application.')
